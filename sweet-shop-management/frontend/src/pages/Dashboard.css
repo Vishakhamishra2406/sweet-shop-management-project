@@ -1,0 +1,298 @@
+/* ======================
+   DASHBOARD BASE
+====================== */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffd6a5, #ff8fab); /* Peach → Rose Pink */
+  color: #1f1f1f; /* Dark text for readability */
+}
+
+/* ======================
+   HEADER
+====================== */
+.dashboard-header {
+  background: linear-gradient(135deg, #b7e4c7, #ff8fab); /* Mint → Rose Pink */
+  color: #1f1f1f; /* Dark text */
+  padding: 22px 0;
+  box-shadow: 0 10px 25px rgba(255, 143, 171, 0.35);
+}
+
+.dashboard-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #1f1f1f; /* Dark header text */
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ======================
+   SEARCH SECTION
+====================== */
+.search-section {
+  background: #ffd6a5; /* Peach */
+  padding: 28px;
+  border-radius: 14px;
+  margin: 24px 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2 {
+  margin-bottom: 18px;
+  color: #1f1f1f; /* Dark text */
+  font-weight: 600;
+}
+
+.search-filters {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.search-input,
+.search-select {
+  padding: 12px 14px;
+  border: 1px solid #ff8fab; /* Rose Pink border */
+  border-radius: 10px;
+  font-size: 15px;
+  flex: 1;
+  min-width: 160px;
+  color: #1f1f1f; /* Dark input text */
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-input::placeholder,
+.search-select option {
+  color: #4f4f4f; /* Medium contrast placeholder */
+}
+
+.search-input:focus,
+.search-select:focus {
+  outline: none;
+  border-color: #b7e4c7; /* Mint Green focus */
+  box-shadow: 0 0 0 3px rgba(183, 228, 199, 0.3);
+}
+
+/* ======================
+   ADMIN ACTIONS
+====================== */
+.admin-actions {
+  margin: 24px 0;
+}
+
+/* ======================
+   SWEETS GRID
+====================== */
+.sweets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+/* ======================
+   SWEET CARD
+====================== */
+.sweet-card {
+  background: #b7e4c7; /* Mint Green card */
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sweet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+}
+
+.sweet-card h3 {
+  margin: 0 0 8px 0;
+  color: #ff4c6d; /* Darker Rose Pink */
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sweet-category {
+  color: #ffb366; /* Darker Peach */
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.sweet-price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff4c6d; /* Dark Rose Pink */
+  margin: 10px 0;
+}
+
+.sweet-quantity {
+  margin: 8px 0;
+  color: #1f1f1f; /* Dark Mint text */
+}
+
+/* ======================
+   CARD ACTIONS
+====================== */
+.sweet-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.sweet-actions button {
+  width: 100%;
+  background-color: #ff4c6d; /* Dark Rose Pink */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sweet-actions button:hover {
+  background-color: #ffb366; /* Darker Peach hover */
+  transform: translateY(-2px);
+}
+
+/* ======================
+   EMPTY & ERROR STATES
+====================== */
+.no-sweets {
+  text-align: center;
+  padding: 48px;
+  color: #ff4c6d; /* Dark Rose Pink */
+  font-size: 18px;
+}
+
+.error-message {
+  text-align: center;
+  padding: 42px;
+  color: #991b1b;
+  background: linear-gradient(135deg, #ffd6a5, #ff8fab);
+  border-radius: 14px;
+  margin: 24px 0;
+}
+
+.error-message h3 {
+  color: #991b1b;
+  margin-bottom: 10px;
+}
+
+.error-message p {
+  margin: 10px 0;
+}
+
+.error-message small {
+  color: #1f1f1f; /* Darker Mint */
+  display: block;
+  margin-top: 10px;
+}
+
+/* ======================
+   MODAL
+====================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(183, 228, 199, 0.6); /* Mint green overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  background: #ffd6a5; /* Peach modal */
+  border-radius: 16px;
+  padding: 0;
+  max-width: 520px;
+  width: 92%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  border-bottom: 1px solid #ff4c6d; /* Dark Rose Pink */
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #ff4c6d; /* Dark Rose Pink */
+  font-weight: 600;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #1f1f1f; /* Dark Mint */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #ff4c6d;
+  transform: scale(1.1);
+}
+
+.modal-body {
+  padding: 22px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.total-price {
+  font-size: 19px;
+  font-weight: 700;
+  color: #ff4c6d; /* Dark Rose Pink */
+  margin: 14px 0;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+  .dashboard-header .container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .search-filters {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .search-select {
+    width: 100%;
+  }
+
+  .sweets-grid {
+    grid-template-columns: 1fr;
+  }
+}

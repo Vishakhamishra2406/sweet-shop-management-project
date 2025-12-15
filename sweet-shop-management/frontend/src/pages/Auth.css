@@ -1,0 +1,133 @@
+/* ==================================
+   BACKGROUND – SWEET & CALM
+================================== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 20% 25%, #ff8fab55, transparent 45%),
+    radial-gradient(circle at 80% 75%, #b7e4c755, transparent 45%),
+    linear-gradient(135deg, #ffd6a5, #ffb3c6);
+
+  animation: ambientGlow 22s ease-in-out infinite;
+}
+
+@keyframes ambientGlow {
+  0%, 100% { filter: brightness(100%); }
+  50% { filter: brightness(104%); }
+}
+
+/* ==================================
+   AUTH CARD
+================================== */
+.auth-card {
+  background: #ffe3c4; /* soft peach card */
+  border-radius: 18px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.35);
+}
+
+/* ==================================
+   HEADINGS
+================================== */
+.auth-card h1 {
+  text-align: center;
+  color: #ff8fab;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6b4b3e;
+  font-size: 24px;
+}
+
+/* ==================================
+   LINKS
+================================== */
+.auth-link {
+  text-align: center;
+  margin-top: 10px;
+  color: #6b4b3e;
+}
+
+.auth-link a,
+.admin-link a {
+  position: relative;
+  color: #ff8fab;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link a::after,
+.admin-link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ff8fab;
+  transition: width 0.3s ease;
+}
+
+.auth-link a:hover::after,
+.admin-link a:hover::after {
+  width: 100%;
+}
+
+/* ==================================
+   ADMIN LINK
+================================== */
+.admin-link {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ffb3c6;
+}
+
+.admin-link a {
+  color: #52b788;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.admin-link a:hover {
+  color: #40916c;
+}
+
+/* ==================================
+   ADMIN BUTTON
+================================== */
+.button-admin {
+  background-color: #b7e4c7 !important;
+  color: #1b4332;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button-admin:hover {
+  background-color: #95d5b2 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(183, 228, 199, 0.6);
+}
+
+/* ==================================
+   INPUT FOCUS
+================================== */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 143, 171, 0.35);
+}
