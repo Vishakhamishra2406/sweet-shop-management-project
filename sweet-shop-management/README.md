@@ -17,6 +17,7 @@ A full-stack web application for managing a sweet shop inventory, built with mod
 - [My AI Usage](#my-ai-usage)
 - [Development Process](#development-process)
 - [License](#license)
+- [Screenshots](#screenshot)
 
 ## 🎯 Overview
 
@@ -385,6 +386,12 @@ Update the `VITE_API_URL` environment variable to point to your production backe
 ## 📝 License
 
 This project is part of a coding assignment/kata and is provided as-is for educational purposes.
+
+## Screenshot
+<img width="1918" height="907" alt="login" src="https://github.com/user-attachments/assets/96b9a777-7b2d-467c-b587-ee7e421f1d8d" />
+
+<img width="1912" height="898" alt="adminside" src="https://github.com/user-attachments/assets/0043fd43-406d-4696-9d48-fe12849a50b2" />
+<img width="1915" height="910" alt="dashboard" src="https://github.com/user-attachments/assets/1b69f14d-988d-4a14-9d8c-4b2ed10abca8" />
 
 ## 👤 Author
 
